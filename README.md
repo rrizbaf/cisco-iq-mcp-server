@@ -121,6 +121,18 @@ or reference an environment variable already set in your shell profile.
 For local development without building, you can instead run `npm run dev`
 (`tsx src/index.ts`) as the `command`/`args`.
 
+## Sharing this with colleagues
+
+This repo contains no credentials — everyone who uses it generates and supplies their
+**own** PAT/SAT (see [Generating a token](#generating-a-token) above). Never share your
+own token with a colleague; give them this repo instead:
+
+1. Clone it: `git clone https://github.com/rrizbaf/cisco-iq-mcp-server.git`
+2. Follow [Setup](#setup) to build it and create their own `.env` (or `mcp.json` entry)
+   with their own PAT/SAT, Account ID, and Region.
+3. Each person's tool calls run under their own Cisco IQ identity and permissions —
+   access to specific assets/contracts is governed by Cisco IQ itself, not this server.
+
 ## Example tool calls
 
 List up to 5 assets with critical/high security advisories:
