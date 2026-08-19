@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.log
+npm-debug.log*
+
+# Secrets - never commit tokens or credentials
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Terminal / agent transcript artifacts (not part of this project)
+terminals/

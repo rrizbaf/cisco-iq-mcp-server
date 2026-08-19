@@ -1,0 +1,33 @@
+{
+  "name": "cisco-iq-mcp-server",
+  "version": "0.1.0",
+  "description": "Local MCP server exposing Cisco IQ's Assets/Assessments REST APIs (beta) as MCP tools.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "cisco-iq-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke-test": "tsx scripts/smoke-test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^5.7.3"
+  }
+}
